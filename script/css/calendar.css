@@ -41,6 +41,22 @@
     font-weight: 600;
 }
 
+/* 新增日历头部样式 */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+    font-weight: 500;
+}
+
 /* 日历控制栏 */
 .calendar-controls {
     display: flex;

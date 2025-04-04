@@ -1,0 +1,368 @@
+:root {
+    --primary-blue: #00629B;
+    --secondary-blue: #003B5C;
+    --accent-orange: #FF6B35;
+    --dark-bg: #2D2D2D;
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #FFFFFF;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* 导航栏 - 与主站一致 */
+.global-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.98);
+    display: flex;
+    align-items: center;
+    padding: 0 6%;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all var(--transition-base);
+}
+
+.nav-logo {
+    height: 55px;
+    margin-right: 2.5rem;
+    transition: transform 0.4s ease;
+}
+
+.nav-menu {
+    flex: 1;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.nav-item {
+    position: relative;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color var(--transition-base);
+}
+
+.nav-item.active {
+    color: var(--primary-blue);
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--primary-blue);
+    transition: all var(--transition-base);
+}
+
+.nav-item:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* 主要内容区 */
+.main-content {
+    padding-top: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 6% 4rem;
+}
+
+/* 关于我们标题部分 */
+.about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about-header h1 {
+    font-size: 2.8rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.about-header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-dark);
+    opacity: 0.9;
+}
+
+/* 关于卡片部分 */
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.about-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-image {
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 2rem;
+}
+
+.card-content h2 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.card-content p {
+    color: var(--text-dark);
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.read-more {
+    display: inline-block;
+    color: var(--primary-blue);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+
+.read-more:hover {
+    color: var(--secondary-blue);
+}
+
+.read-more i {
+    margin-left: 5px;
+    transition: transform var(--transition-base);
+}
+
+.read-more:hover i {
+    transform: translateX(3px);
+}
+
+/* 我们的使命部分 */
+.our-mission {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: var(--text-light);
+    padding: 5rem 6%;
+    border-radius: 12px;
+    margin-bottom: 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mission-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.mission-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.mission-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="white"><circle cx="25" cy="25" r="3"/><circle cx="75" cy="25" r="3"/><circle cx="25" cy="75" r="3"/><circle cx="75" cy="75" r="3"/></svg>');
+    background-size: 50px 50px;
+}
+
+/* 团队部分 */
+.team-section {
+    margin-bottom: 5rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.section-title p {
+    color: var(--text-dark);
+    opacity: 0.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    background: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-base);
+    text-align: center;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 2rem auto 1.5rem;
+    overflow: hidden;
+    border: 3px solid var(--primary-blue);
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-info {
+    padding: 0 1.5rem 2rem;
+}
+
+.member-info h3 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.member-info p.position {
+    color: var(--secondary-blue);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.member-info p.bio {
+    color: var(--text-dark);
+    opacity: 0.8;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--primary-blue);
+    color: white;
+    transition: all var(--transition-base);
+}
+
+.social-links a:hover {
+    background: var(--secondary-blue);
+    transform: translateY(-3px);
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .global-nav {
+        height: 70px;
+        padding: 0 5%;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .about-header h1 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 80px 5% 3rem;
+    }
+
+    .about-header h1 {
+        font-size: 2rem;
+    }
+
+    .about-header p {
+        font-size: 1rem;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+}

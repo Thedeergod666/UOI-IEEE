@@ -1,75 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>University of Leicester IEEE Student Branch</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/main.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
     <!-- 导航栏 -->
-    <nav class="global-nav">
-        <img src="images/ieee-logo.png" alt="IEEE Logo" class="nav-logo">
-        <div class="nav-menu">
-            <a href="index.html" class="nav-item">Home</a>
-            <a href="events.html" class="nav-item">Events</a>
-            <a href="calendar.html" class="nav-item">Calendar</a>
-            <a href="collaboration.html" class="nav-item">Collaboration</a>
-            <a href="committee.html" class="nav-item">Committee</a>
-            <a href="about.html" class="nav-item">About Us</a>
-        </div>
-        <a href="#join" class="nav-item join-button">Join IEEE</a>
-    </nav>
 
     <!-- 主内容区 -->
     <main>
-        <!-- 轮播区 -->
-        <section class="hero-section">
-            <div class="hero-carousel"></div>
-            <div class="hero-overlay">
-                <div class="hero-content">
-                    <img src="images/logo-white.png" alt="Main Logo" class="hero-logo">
-                    <h1>University of Leicester IEEE Student Branch</h1>
-                    <div class="design-credit">
-                        Designed by <a href="https://gimo.group">GIMO Group</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- 独立标题区域 -->
+    <section class="header-section">
+        <div class="header-content">
+            <img src="../../res/image/IEEE学生会logo.jpg" alt="Main Logo" class="hero-logo">
+            <h1>University of Leicester IEEE Student Branch</h1>
+        </div>
+    </section>
 
-        <!-- 时间线 & 合作伙伴 -->
-        <section class="timeline-section">
-            <div class="timeline-container">
-                <div class="timeline-column">
-                    <div class="timeline-track"></div>
-                    <!-- AJAX加载时间线数据 -->
-                </div>
-                <div class="partners-grid">
-                    <!-- AJAX加载合作伙伴 -->
+
+    <!-- 轮播区 -->
+    <section class="hero-carousel-section">
+        <div class="hero-carousel-container">
+            <!-- 活动轮播项1 -->
+            <div class="carousel-item active">
+                <div class="carousel-image" style="background-image: url('../../res/image/event1.jpg')"></div>
+                <div class="carousel-content">
+                    <span class="event-badge">最新活动</span>
+                    <h2>人工智能前沿研讨会</h2>
+                    <p class="event-date">2025年4月15日 | 莱斯特大学工程楼203</p>
+                    <p class="event-description">本次研讨会将探讨人工智能在工程领域的最新应用和发展趋势，邀请多位行业专家进行分享。</p>
+                    <a href="events.html#ai-seminar" class="event-button">了解更多</a>
                 </div>
             </div>
-        </section>
+            
+            <!-- 活动轮播项2 -->
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('../../res/image/event2.jpg')"></div>
+                <div class="carousel-content">
+                    <span class="event-badge">热门活动</span>
+                    <h2>年度硬件设计大赛</h2>
+                    <p class="event-date">2025年4月20-22日 | 工程实验室</p>
+                    <p class="event-description">展示你的创新硬件设计，与全校顶尖团队同台竞技，赢取丰厚奖品和实习机会。</p>
+                    <a href="events.html#hardware-contest" class="event-button">立即报名</a>
+                </div>
+            </div>
+            
+            <!-- 活动轮播项3 -->
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('../../res/image/event3.jpg')"></div>
+                <div class="carousel-content">
+                    <span class="event-badge">国际交流</span>
+                    <h2>慕尼黑工业大学联合研讨会</h2>
+                    <p class="event-date">2025年5月10日 | 线上会议</p>
+                    <p class="event-description">与德国顶尖工程院校师生交流，拓展国际视野，建立跨国学术合作关系。</p>
+                    <a href="events.html#tum-workshop" class="event-button">加入会议</a>
+                </div>
+            </div>
+            
+            <!-- 轮播控制按钮 -->
+            <button class="carousel-control prev">‹</button>
+            <button class="carousel-control next">›</button>
+            
+            <!-- 轮播指示器 -->
+            <div class="carousel-indicators">
+                <button class="indicator active" data-slide-to="0"></button>
+                <button class="indicator" data-slide-to="1"></button>
+                <button class="indicator" data-slide-to="2"></button>
+            </div>
+        </div>
+    </section>
+
+      <!-- 时间线 & 合作伙伴 -->
+      <section class="timeline-section">
+        <div class="timeline-header">
+          <h2>发展历程与合作网络</h2>
+          <p class="design-credit">Website designed by GIMO</p>
+          <br>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-column">
+            <div class="timeline-track"></div>
+            <!-- 时间节点示例 -->
+            <div class="timeline-node">
+              <div class="timeline-date">2024年12月</div>
+              <div class="timeline-content">
+                <h3>IEEE成立</h3>
+                <p>学生分会正式成立仪式，邀请了多位教授和行业专家参加。</p>
+              </div>
+            </div>
+
+            <div class="timeline-node">
+              <div class="timeline-date">2025年3月</div>
+              <div class="timeline-content">
+                <h3>技术研讨会</h3>
+                <p>关于人工智能在工程领域应用的前沿技术分享会。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-column">
+            <div class="timeline-track"></div>
+
+            <div class="timeline-node">
+              <div class="timeline-date">2025年4月</div>
+              <div class="timeline-content">
+                <h3>硬件比赛</h3>
+                <p>年度硬件设计大赛，吸引了全校30多支队伍参加。</p>
+              </div>
+            </div>
+
+            <div class="timeline-node">
+              <div class="timeline-date">2025年5月</div>
+              <div class="timeline-content">
+                <h3>国际交流</h3>
+                <p>与德国慕尼黑工业大学的学生分会进行线上交流活动。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="partners-section">
+        <div class="section-header">
+          <h2>战略合作伙伴</h2>
+          <p>与全球顶尖高校和研究机构建立合作关系</p>
+        </div>
+
+        <div class="partners-grid">
+          <!-- 合作伙伴1 -->
+          <div class="partner-card">
+            <div class="partner-logo">
+              <img src="../../res/image/莱大logo.jpg" alt="University of Leicester">
+            </div>
+            <div class="partner-info">
+              <h3>莱斯特大学</h3>
+              <p>英国领先的研究型大学</p>
+            </div>
+          </div>
+
+          <!-- 合作伙伴2 -->
+          <div class="partner-card">
+            <div class="partner-logo">
+              <img src="../../res/image/大工logo.jpg" alt="Dalian University of Technology">
+            </div>
+            <div class="partner-info">
+              <h3>大连理工大学</h3>
+              <p>中国著名工程类高校</p>
+            </div>
+          </div>
+
+          <!-- 合作伙伴3 -->
+          <div class="partner-card">
+            <div class="partner-logo">
+              <img src="../../res/image/阿波罗大学logo.png" alt="Apollo University">
+            </div>
+            <div class="partner-info">
+              <h3>阿波罗大学</h3>
+              <p>印度顶尖工程技术学院</p>
+            </div>
+          </div>
+
+          <!-- 合作伙伴4 -->
+          <div class="partner-card">
+            <div class="partner-logo">
+              <img src="../../res/image/GIMO logo.png" alt="GIMO Group">
+            </div>
+            <div class="partner-info">
+              <h3>GIMO Group</h3>
+              <p>技术创新合作伙伴</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <!-- 页脚 -->
-    <footer class="global-footer">
-        <div class="footer-container">
-            <div class="footer-branding">
-                <img src="images/gimo-logo-white.png" alt="GIMO Logo" class="footer-logo">
-                <div>
-                    <p>University of Leicester</p>
-                    <p>IEEE Student Branch</p>
-                </div>
-            </div>
-            <div class="footer-meta">
-                <p><a href="mailto:GIMO118@outlook.com" class="footer-link">GIMO118@outlook.com</a></p>
-                <p><a href="https://ieee.le.ac.uk" class="footer-link">https://ieee.le.ac.uk</a></p>
-                <p>&copy; 2024 GIMO Group</p>
-            </div>
-        </div>
-    </footer>
 
     <script src="../js/main.js"></script>
-</body>
+    <script src="../js/template-loader.js"></script>
+  </body>
 </html>

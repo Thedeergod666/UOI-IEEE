@@ -14,7 +14,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
 }
 
 html {
@@ -23,8 +22,14 @@ html {
 }
 
 body {
-    background: #FFFFFF;
-    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 /* 导航栏样式 */
@@ -101,51 +106,259 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* 英雄区域样式 */
-.hero-section {
-    height: 100vh;
+/* 标题区域样式 */
+.header-section {
+    background: #f8f9fa;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 80px; /* 为固定导航栏留出空间 */
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.hero-logo {
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+/* 轮播区域样式 - 单张显示 */
+.hero-carousel-section {
     position: relative;
+    width: 100%;
+    height: 80vh;
+    min-height: 600px;
+    margin: 2rem 0;
     overflow: hidden;
 }
 
-.hero-carousel {
-    position: absolute;
+.hero-carousel-container {
+    position: relative;
     width: 100%;
     height: 100%;
-    animation: carousel 30s infinite;
 }
 
-@keyframes carousel {
-    0%, 100% { background-image: url('../images/hero1.jpg'); }
-    33% { background-image: url('../images/hero2.jpg'); }
-    66% { background-image: url('../images/hero3.jpg'); }
-}
-
-.hero-overlay {
+.carousel-item {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.carousel-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    min-width: 50%;
+}
+
+.carousel-content {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 98, 155, 0.9);
+    color: white;
+    max-width: 600px;
+}
+
+.event-badge {
+    display: inline-block;
+    background: var(--accent-orange);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    align-self: flex-start;
+}
+
+.carousel-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.event-date {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.event-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* 轮播控制按钮 */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all var(--transition-base);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.hero-content {
-    text-align: center;
-    color: var(--text-light);
-    opacity: 0;
-    animation: heroEntrance 1.5s forwards 0.3s;
+.carousel-control:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-50%) scale(1.1);
 }
 
-.hero-logo {
-    height: 80px;
-    margin-bottom: 1.5rem;
+.carousel-control.prev {
+    left: 2rem;
 }
 
-@keyframes heroEntrance {
-    from { opacity: 0; transform: translateY(2rem) scale(0.98); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
+.carousel-control.next {
+    right: 2rem;
+}
+
+/* 轮播指示器 */
+.carousel-indicators {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    z-index: 10;
+}
+
+.indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: transparent;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.indicator.active {
+    background: white;
+    transform: scale(1.2);
+}
+
+/* 多活动轮播区样式 */
+.multi-carousel {
+    background: var(--dark-bg);
+    padding: 2rem 0;
+    overflow: hidden;
+}
+
+.carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.carousel-slide {
+    min-width: calc(33.333% - 1rem);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 16/9;
+}
+
+.carousel-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.slide-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.event-badge {
+    background: var(--accent-orange);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.event-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--primary-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+    transition: background var(--transition-base);
+}
+
+.event-button:hover {
+    background: var(--secondary-blue);
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    border: none;
+    cursor: pointer;
+    transition: background var(--transition-base);
+}
+
+.carousel-dot.active {
+    background: white;
 }
 
 /* 时间线样式 */
@@ -157,6 +370,8 @@ body {
 .timeline-container {
     display: flex;
     gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .timeline-column {
@@ -190,37 +405,84 @@ body {
 }
 
 /* 合作伙伴样式 */
+.partners-section {
+    padding: 4rem 6%;
+    background: #f8fafc;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    color: var(--text-dark);
+    opacity: 0.8;
+}
+
 .partners-grid {
-    flex: 2;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .partner-card {
-    position: relative;
-    height: 280px;
+    background: white;
     border-radius: 1rem;
     overflow: hidden;
-    transition: transform var(--transition-base);
-}
-
-.partner-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 1.5rem;
-    color: var(--text-light);
-    opacity: 0;
-    transition: opacity var(--transition-base);
 }
 
-.partner-card:hover .partner-overlay {
-    opacity: 1;
+.partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.partner-logo {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa, #e4e8eb);
+}
+
+.partner-logo img {
+    max-height: 80px;
+    max-width: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter var(--transition-base);
+}
+
+.partner-card:hover .partner-logo img {
+    filter: grayscale(0%);
+}
+
+.partner-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.partner-info h3 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.partner-info p {
+    color: var(--text-dark);
+    opacity: 0.8;
+    font-size: 0.9rem;
 }
 
 /* 页脚样式 */
@@ -238,19 +500,9 @@ body {
     align-items: center;
 }
 
-.footer-branding {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
 .footer-logo {
     height: 45px;
     filter: brightness(0) invert(1);
-}
-
-.footer-meta {
-    text-align: right;
 }
 
 .footer-link {
@@ -265,9 +517,6 @@ body {
 }
 
 .design-credit {
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
     font-size: 0.9rem;
 }
 
@@ -277,6 +526,54 @@ body {
 }
 
 /* 响应式设计 */
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .hero-carousel-section {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .carousel-item {
+        flex-direction: column;
+    }
+    
+    .carousel-image {
+        min-height: 50%;
+        min-width: 100%;
+    }
+    
+    .carousel-content {
+        max-width: 100%;
+        padding: 2rem;
+    }
+    
+    .carousel-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-carousel-section {
+        height: 90vh;
+        min-height: auto;
+    }
+    
+    .carousel-control {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .carousel-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .event-description {
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 1200px) {
     .nav-menu {
         gap: 1.5rem;
@@ -297,14 +594,19 @@ body {
         flex-direction: column;
     }
 
-    .partners-grid {
-        grid-template-columns: 1fr;
+    .carousel-slide {
+        min-width: calc(50% - 1rem);
     }
 }
 
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
+    .header-section {
+        margin-top: 70px;
+        padding: 1.5rem 0;
+    }
+
+    .carousel-slide {
+        min-width: 100%;
     }
 
     .footer-container {
@@ -312,8 +614,14 @@ body {
         gap: 2rem;
         text-align: center;
     }
+}
 
-    .footer-meta {
-        text-align: center;
+@media (max-width: 480px) {
+    .header-content {
+        padding: 0 1rem;
+    }
+    
+    .hero-logo {
+        height: 60px;
     }
 }
