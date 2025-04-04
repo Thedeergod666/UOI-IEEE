@@ -29,3 +29,4 @@ UOL-website/
 ### 改动2025-4-4
 1. 整理了一下文件结构，方便开发
 2. wps要冲会员，球球大家用github，仓库地址https://github.com/1lancerZ/UOI-IEEE
+3. 首页新增轮播表轮播近期活动
