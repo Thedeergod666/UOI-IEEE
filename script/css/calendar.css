@@ -1,0 +1,249 @@
+/* 日历页面特有样式 */
+
+/* 导航栏样式 */
+.navbar {
+    background-color: #0066cc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.navbar a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
+
+.navbar a:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.join-link {
+    background-color: #004080;
+    font-weight: 600;
+}
+
+/* 日历控制栏 */
+.calendar-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-controls h2 {
+    color: white;
+    margin: 0;
+    min-width: 200px;
+    text-align: center;
+}
+
+.controls-btn {
+    background: #0052a3;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+.controls-btn:hover {
+    background: #003d80;
+    transform: scale(1.05);
+}
+
+/* 日历容器 */
+.calendar-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.calendar-table th {
+    text-align: center;
+    padding: 15px;
+    background-color: #f0f8ff;
+    font-weight: 600;
+}
+
+.calendar-table td {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    vertical-align: top;
+    height: 120px;
+}
+
+.calendar-day {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* 事件样式 */
+.event {
+    background-color: #f8f9fa;
+    padding: 5px;
+    margin: 3px 0;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.event:hover {
+    background-color: #e9ecef;
+}
+
+.event-marker {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.event-pending .event-marker {
+    background-color: #ff6b35;
+}
+
+.event-completed .event-marker {
+    background-color: #28a745;
+}
+
+.event small {
+    display: block;
+    color: #6c757d;
+    font-size: 12px;
+}
+
+/* 添加按钮 */
+.add-btn {
+    background: #0066cc;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-btn:hover {
+    background: #0052a3;
+    transform: scale(1.1);
+}
+
+.add-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* 模态框样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 25px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0052a3;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px;
+    }
+    
+    .nav-links {
+        justify-content: center;
+    }
+    
+    .calendar-table td {
+        height: 80px;
+        font-size: 14px;
+    }
+    
+    .event {
+        font-size: 12px;
+    }
+}
