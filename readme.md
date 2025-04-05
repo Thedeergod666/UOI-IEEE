@@ -20,11 +20,16 @@ UOL-website/
     │   ├── index.html            # 首页
     │   ├── calendar.html         # 日历页
     │   └── events.html           # 活动页
+    |── include/                  # 可以复用的元素，比如导航栏和页脚等
     └── js/
         ├── main.js               # 全局脚本
         ├── calendar.js           # 日历功能
         └── events.js             # 活动功能
 ```
+
+### 改动2025-4-5
+1. 完善calendar页面，做了增删改功能
+2. 其实还不够完善，现在所有人都能改，权限的话要等后端
 
 ### 改动2025-4-4
 1. 整理了一下文件结构，方便开发
