@@ -63,3 +63,28 @@
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="white"><circle cx="25" cy="25" r="3"/><circle cx="75" cy="25" r="3"/><circle cx="25" cy="75" r="3"/><circle cx="75" cy="75" r="3"/></svg>');
   background-size: 50px 50px;
 }
+
+/* 活动详情页布局 */
+.event-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.event-sidebar {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .event-content {
+      grid-template-columns: 1fr;
+  }
+  
+  .event-hero {
+      height: 300px;
+  }
+}

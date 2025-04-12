@@ -77,6 +77,7 @@ uol-website/
 ```
 ### 改动2025-4-9
 1. 改了一下项目结构
+2. Calendar里面的增删改暂时先ban了，等后端
 
 ### 改动2025-4-9
 1. 用github pages做了网页托管，现在暂时只有静态页面，先用着。网址：https://1lancerz.github.io/

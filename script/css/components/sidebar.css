@@ -1,0 +1,122 @@
+/* 侧边栏容器样式 */
+.event-sidebar {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+/* 注册框样式 */
+.registration-box {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-top: 4px solid #e74c3c;
+}
+
+.registration-box h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+.registration-box p {
+    color: #555;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.95rem;
+}
+
+.registration-box .button.primary {
+    display: block;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.small-text {
+    font-size: 0.85rem;
+    color: #777;
+    text-align: center;
+}
+
+/* 主办单位样式 */
+.organizer-info {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1.5rem;
+}
+
+.organizer-info h3 {
+    color: #2c3e50;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.organizer-info p {
+    color: #555;
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+}
+
+/* 快速链接样式 */
+.quick-links {
+    margin-bottom: 1.5rem;
+}
+
+.quick-links h3 {
+    color: #2c3e50;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links li {
+    margin-bottom: 0.5rem;
+}
+
+.quick-links a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    padding: 0.5rem 0;
+    transition: color 0.2s;
+}
+
+.quick-links a:hover {
+    color: #e74c3c;
+}
+
+/* 联系方式样式 */
+.contact-info h3 {
+    color: #2c3e50;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    color: #555;
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .event-sidebar {
+        position: static;
+        margin-top: 2rem;
+    }
+    
+    .registration-box {
+        padding: 1.25rem;
+    }
+}

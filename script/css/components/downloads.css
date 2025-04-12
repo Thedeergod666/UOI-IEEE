@@ -1,0 +1,20 @@
+/* 下载组件 */
+.download-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f0f7ff;
+    border-radius: 8px;
+}
+
+.download-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.download-icon {
+    margin-right: 1rem;
+    width: 24px;
+    height: 24px;
+}
