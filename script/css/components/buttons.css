@@ -1,0 +1,138 @@
+/* 通用按钮样式 */
+button,
+a.button,
+.join-button,
+.event-button,
+.controls-btn,
+.submit-btn,
+.edit-btn,
+.delete-btn,
+.cancel-btn {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  transition: all var(--transition-base);
+}
+
+/* 加入按钮 */
+.join-button {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  color: var(--text-light) !important;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.join-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 事件按钮 */
+.event-button {
+  padding: 0.6rem 1.5rem;
+  background: var(--primary-blue);
+  color: white;
+  border-radius: 2rem;
+  text-decoration: none;
+}
+
+.event-button:hover {
+  background: var(--secondary-blue);
+}
+
+/* 日历控制按钮 */
+.controls-btn {
+  background: #0052a3;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.controls-btn:hover {
+  background: #003d80;
+  transform: scale(1.05);
+}
+
+/* 添加按钮 */
+.add-btn {
+  background: var(--primary-blue);
+  border: none;
+  padding: 0px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-btn:hover {
+  background: var(--secondary-blue);
+  transform: scale(1.1);
+}
+
+/* 表单提交与操作按钮 */
+.submit-btn {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-blue);
+}
+
+.edit-btn {
+  background: #4285f4;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #3367d6;
+}
+
+.cancel-btn {
+  background: #f5f5f5;
+}
+
+.cancel-btn:hover {
+  background: #e0e0e0;
+}
+
+.delete-btn {
+  background: #ff4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #cc0000;
+}
+
+/* 内页链接按钮样式：Read More */
+.read-more {
+  display: inline-block;
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.read-more:hover {
+  color: var(--secondary-blue);
+}
+
+.read-more i {
+  margin-left: 5px;
+  transition: transform var(--transition-base);
+}
+
+.read-more:hover i {
+  transform: translateX(3px);
+}

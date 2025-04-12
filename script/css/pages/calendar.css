@@ -1,0 +1,121 @@
+/* 日历头部 */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+  
+  .calendar-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+    font-weight: 500;
+  }
+  
+  /* 日历控制栏 */
+  .calendar-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .calendar-controls h2 {
+    color: white;
+    margin: 0;
+    min-width: 200px;
+    text-align: center;
+  }
+  
+  /* 日历表格 */
+  .calendar-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .calendar-table th {
+    text-align: center;
+    padding: 15px;
+    background-color: #f0f8ff;
+    font-weight: 600;
+  }
+  
+  .calendar-table td {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    vertical-align: top;
+    height: 120px;
+  }
+  
+  .calendar-day {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* 日历中的事件块 */
+  .event {
+    background-color: #f8f9fa;
+    padding: 5px;
+    margin: 3px 0;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .event:hover {
+    background-color: #e9ecef;
+  }
+  
+  .event-marker {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .event-pending .event-marker {
+    background-color: var(--accent-orange);
+  }
+  
+  .event-completed .event-marker {
+    background-color: #28a745;
+  }
+  
+  .event small {
+    display: block;
+    color: #6c757d;
+    font-size: 12px;
+  }
+  
+  /* 响应式 */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 15px;
+    }
+  
+    .nav-links {
+      justify-content: center;
+    }
+  
+    .calendar-table td {
+      height: 80px;
+      font-size: 14px;
+    }
+  
+    .event {
+      font-size: 12px;
+    }
+  }
+  

@@ -1,0 +1,58 @@
+/* 通用时间线容器 */
+.timeline-section {
+    padding: 6rem 6%;
+    background: var(--bg-light);
+  }
+  
+  .timeline-container {
+    display: flex;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .timeline-column {
+    flex: 1;
+    position: relative;
+    padding-left: 2rem;
+  }
+  
+  .timeline-track {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-blue), var(--secondary-blue));
+    border-radius: 2px;
+  }
+  
+  /* 时间节点卡片 */
+  .timeline-node,
+  .timeline-event {
+    position: relative;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform var(--transition-base);
+    margin-bottom: 2.5rem;
+  }
+  
+  .timeline-node:hover {
+    transform: translateX(1rem);
+  }
+  
+  /* 时间线上的圆点（事件页面） */
+  .timeline-event::before {
+    content: '';
+    position: absolute;
+    left: -2.3rem;
+    top: 2rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: var(--accent-orange);
+    border: 3px solid var(--primary-blue);
+  }
+  

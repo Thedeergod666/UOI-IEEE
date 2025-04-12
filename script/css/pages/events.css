@@ -1,0 +1,46 @@
+/* 事件页面布局容器 */
+.events-container {
+    padding: 0 6% 4rem;
+  }
+  
+  /* 过去事件时间线 */
+  .past-events {
+    padding: 3rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .past-events h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--secondary-blue);
+  }
+  
+  .events-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 2rem;
+  }
+  
+  .events-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-blue), var(--secondary-blue));
+  }
+  
+  /* 响应式 */
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 2rem;
+      margin: 4rem 0 2rem;
+    }
+  
+    .events-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

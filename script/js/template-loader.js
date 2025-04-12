@@ -106,17 +106,17 @@ class TemplateLoader {
   createFallbackNav() {
     return `
     <nav class="global-nav">
-    <img src="../../res/image/IEEE学生会logo.jpg" alt="IEEE Logo" class="nav-logo">
-    <div class="nav-menu">
-        <a href="index.html" class="nav-item">Home</a>
-        <a href="events.html" class="nav-item">Events</a>
-        <a href="calendar.html" class="nav-item">Calendar</a>
-        <a href="collaboration.html" class="nav-item">Collaboration</a>
-        <a href="committee.html" class="nav-item">Committee</a>
-        <a href="about.html" class="nav-item">About Us</a>
-    </div>
-    <a href="#join" class="nav-item join-button">Join IEEE</a>
-</nav>
+        <img src="res/image/IEEE学生会logo.jpg" alt="IEEE Logo" class="nav-logo">
+        <div class="nav-menu">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="events.html" class="nav-item">Events</a>
+            <a href="calendar.html" class="nav-item">Calendar</a>
+            <a href="collaboration.html" class="nav-item">Collaboration</a>
+            <!-- <a href="committee.html" class="nav-item">Committee</a> -->
+            <a href="about.html" class="nav-item">About Us</a>
+        </div>
+        <a href="#join" class="nav-item join-button">Join IEEE</a>
+    </nav>
     `;
   }
 
@@ -124,21 +124,21 @@ class TemplateLoader {
   createFallbackFooter() {
     return `
     <footer class="global-footer">
-    <div class="footer-container">
-        <div class="footer-branding">
-            <img src="../../res/image/GIMO logo.png" alt="GIMO Logo" class="footer-logo">
-            <div>
-                <p>University of Leicester</p>
-                <p>IEEE Student Branch</p>
+        <div class="footer-container">
+            <div class="footer-branding">
+                <img src="res/image/GIMO logo.png" alt="GIMO Logo" class="footer-logo">
+                <div>
+                    <p>University of Leicester</p>
+                    <p>IEEE Student Branch</p>
+                </div>
+            </div>
+            <div class="footer-meta">
+                <p><a href="mailto:GIMO118@outlook.com" class="footer-link">GIMO118@outlook.com</a></p>
+                <p><a href="https://ieee.le.ac.uk" class="footer-link">https://ieee.le.ac.uk</a></p>
+                <p>&copy; 2024 GIMO Group</p>
             </div>
         </div>
-        <div class="footer-meta">
-            <p><a href="mailto:GIMO118@outlook.com" class="footer-link">GIMO118@outlook.com</a></p>
-            <p><a href="https://ieee.le.ac.uk" class="footer-link">https://ieee.le.ac.uk</a></p>
-            <p>&copy; 2024 GIMO Group</p>
-        </div>
-    </div>
-</footer>
+    </footer>
     `;
   }
 }

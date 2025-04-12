@@ -1,0 +1,41 @@
+/* 通用网格容器 */
+.events-grid,
+.partners-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.events-grid {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-bottom: 4rem;
+}
+
+.partners-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  justify-items: center;
+  gap: 3rem;
+}
+
+/* 合作伙伴 Logo 样式 */
+.partner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: scale(1.05);
+}
+
+.partner-logo img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}

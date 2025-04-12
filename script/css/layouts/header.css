@@ -1,0 +1,19 @@
+/* 页面顶部标题区域 */
+.header-section {
+    background: #f8f9fa;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 80px; /* 留出固定导航栏空间 */
+  }
+  
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .hero-logo {
+    height: 180px;
+    margin-bottom: 1rem;
+  }
+  

@@ -1,0 +1,135 @@
+/* 首页轮播区域 */
+.hero-carousel-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    min-height: 600px;
+    margin: 2rem 0;
+    overflow: hidden;
+  }
+  
+  .hero-carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .carousel-item.active {
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .carousel-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    min-width: 50%;
+  }
+  
+  .carousel-content {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 98, 155, 0.9);
+    color: white;
+    max-width: 600px;
+  }
+  
+  /* 多图轮播 */
+  .multi-carousel {
+    background: var(--dark-bg);
+    padding: 2rem 0;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .carousel-slide {
+    min-width: calc(33.333% - 1rem);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 16/9;
+  }
+  
+  .carousel-slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .slide-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  /* 控制按钮 */
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+  
+  .carousel-control:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .carousel-control.prev {
+    left: 2rem;
+  }
+  
+  .carousel-control.next {
+    right: 2rem;
+  }
+  
+  .carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .carousel-dot.active {
+    background: white;
+  }
+  

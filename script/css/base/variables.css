@@ -1,0 +1,11 @@
+:root {
+    --primary-blue: #00629B;
+    --secondary-blue: #003B5C;
+    --accent-orange: #FF6B35;
+    --dark-bg: #2D2D2D;
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --bg-light: #f8fafc;
+  }
+  

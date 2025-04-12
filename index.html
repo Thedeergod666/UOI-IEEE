@@ -1,9 +1,255 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="refresh" content="0; url=./script/html/index.html" />
-</head>
-<body>
-    <p>Redirecting to <a href="./script/html/index.html">main page</a>...</p>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University of Leicester IEEE Student Branch</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Base -->
+    <link rel="stylesheet" href="script/css/base/variables.css" />
+    <link rel="stylesheet" href="script/css/base/reset.css" />
+    <link rel="stylesheet" href="script/css/base/typography.css" />
+
+    <!-- Layouts -->
+    <link rel="stylesheet" href="script/css/layouts/header.css" />
+    <link rel="stylesheet" href="script/css/layouts/footer.css" />
+    <link rel="stylesheet" href="script/css/layouts/sections.css" />
+
+    <!-- Components -->
+    <link rel="stylesheet" href="script/css/components/nav.css" />
+    <link rel="stylesheet" href="script/css/components/buttons.css" />
+    <link rel="stylesheet" href="script/css/components/carousel.css" />
+    <link rel="stylesheet" href="script/css/components/timeline.css" />
+    <link rel="stylesheet" href="script/css/components/grid.css" />
+
+    <!-- Page-specific -->
+    <link rel="stylesheet" href="script/css/pages/home.css" />
+  </head>
+  <body>
+    <!-- 导航栏 -->
+
+    <!-- 主内容区 -->
+    <main>
+      <!-- 独立标题区域 -->
+      <section class="header-section">
+        <div class="header-content">
+          <img
+            src="res/image/IEEE学生会logo.jpg"
+            alt="Main Logo"
+            class="hero-logo"
+          />
+          <h1>University of Leicester IEEE Student Branch</h1>
+        </div>
+      </section>
+
+      <!-- 轮播区 -->
+      <section class="hero-carousel-section">
+        <div class="hero-carousel-container">
+          <!-- 活动轮播项1 -->
+          <div class="carousel-item">
+            <div
+              class="carousel-image"
+              style="background-image: url('res/image/GIMO logo.png')"
+            ></div>
+            <div class="carousel-content">
+              <span class="event-badge">关于我们</span>
+              <h2>栀木集团</h2>
+              <p class="event-date">简介</p>
+              <p class="event-description">
+                我们是一个名校大学生创业科技公司集团，比赛赞助方和支持方之一
+              </p>
+              <a href="about.html" class="event-button">了解详细</a>
+            </div>
+          </div>
+
+          <!-- 活动轮播项2 -->
+          <div class="carousel-item">
+            <div
+              class="carousel-image"
+              style="background-image: url('res/image/event2.jpg')"
+            ></div>
+            <div class="carousel-content">
+              <span class="event-badge">Featured Event</span>
+              <h2>Annual Hardware Design Competition</h2>
+              <p class="event-date">April 20-22, 2025 | Engineering Lab</p>
+              <p class="event-description">
+                Showcase your innovative hardware designs, compete with top
+                teams across the university, and win exciting prizes and
+                internship opportunities.
+              </p>
+              <a href="events.html#hardware-contest" class="event-button"
+                >Register Now</a
+              >
+            </div>
+          </div>
+
+          <!-- 轮播控制按钮 -->
+          <button class="carousel-control prev">‹</button>
+          <button class="carousel-control next">›</button>
+
+          <!-- 轮播指示器 -->
+          <div class="carousel-indicators">
+            <button class="indicator active" data-slide-to="0"></button>
+            <button class="indicator" data-slide-to="1"></button>
+            <!-- <button class="indicator" data-slide-to="2"></button> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 时间线 & 合作伙伴 -->
+      <section class="timeline-section">
+        <div class="timeline-header">
+          <h2>Our Journey & Network</h2>
+          <p class="design-credit">Website designed by GIMO</p>
+          <br />
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-column">
+            <div class="timeline-track"></div>
+            <!-- Timeline Node Example -->
+            <div class="timeline-node">
+              <div class="timeline-date">December 2024</div>
+              <div class="timeline-content">
+                <h3>IEEE Establishment</h3>
+                <p>
+                  Official inauguration ceremony attended by professors and
+                  industry experts.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-node">
+              <div class="timeline-date">March 2025</div>
+              <div class="timeline-content">
+                <h3>Technical Seminar</h3>
+                <p>
+                  Cutting-edge technology sharing session on AI applications in
+                  engineering.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-column">
+            <div class="timeline-track"></div>
+
+            <div class="timeline-node">
+              <div class="timeline-date">April 2025</div>
+              <div class="timeline-content">
+                <h3>Hardware Competition</h3>
+                <p>
+                  Annual hardware design competition with over 30 participating
+                  teams.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-node">
+              <div class="timeline-date">May 2025</div>
+              <div class="timeline-content">
+                <h3>International Exchange</h3>
+                <p>
+                  Online exchange event with Dalian University of Technology
+                  student branch.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="partners-section">
+        <div class="section-header">
+          <h2>Strategic Partners</h2>
+          <p>
+            Collaborating with world-leading universities and research
+            institutions
+          </p>
+        </div>
+
+        <div class="partners-grid">
+          <!-- 合作伙伴1 -->
+          <div class="partner-card">
+            <div class="partner-logo">
+              <img
+                src="res/image/莱大logo.jpg"
+                alt="莱斯特大学"
+                title="莱斯特大学"
+              />
+            </div>
+          </div>
+
+          <!-- 合作伙伴2 -->
+          <div class="partner-card">
+            <div class="partner-logo">
+              <img
+                src="res/image/大工logo.jpg"
+                alt="大连理工大学"
+                title="大连理工大学"
+              />
+            </div>
+          </div>
+
+          <!-- 合作伙伴3 -->
+          <div class="partner-card">
+            <div class="partner-logo">
+              <img
+                src="res/image/阿波罗大学logo.png"
+                alt="阿波罗大学"
+                title="阿波罗大学"
+              />
+            </div>
+          </div>
+
+          <!-- 合作伙伴4 -->
+          <div class="partner-card">
+            <div class="partner-logo">
+              <img
+                src="res/image/GIMO logo.png"
+                alt="GIMO Group"
+                title="GIMO Group"
+              />
+            </div>
+          </div>
+
+          <!-- 合作伙伴5 -->
+          <div class="partner-card">
+            <div class="partner-logo">
+              <img src="res/image/EasyEDA.png" alt="EasyEDA" title="EasyEDA" />
+            </div>
+          </div>
+
+          <!-- 合作伙伴6 -->
+          <div class="partner-card">
+            <div class="partner-logo">
+              <img src="res/image/IAS.png" alt="IAS" title="IAS" />
+            </div>
+          </div>
+
+          <!-- 合作伙伴7 -->
+          <div class="partner-card">
+            <div class="partner-logo">
+              <img src="res/image/IPES.png" alt="PEIS" title="PEIS" />
+            </div>
+          </div>
+
+          <!-- 合作伙伴8 -->
+          <div class="partner-card">
+            <div class="partner-logo">
+              <img src="res/image/WIE.png" alt="WIE" title="WIE" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 页脚 -->
+
+    <script src="script/js/main.js"></script>
+    <script src="script/js/template-loader.js"></script>
+  </body>
 </html>

@@ -1,0 +1,75 @@
+/* 页面主要内容容器 */
+.main-content {
+    padding-top: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 6% 4rem;
+  }
+  
+  /* 关于我们标题 */
+  .about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .about-header h1 {
+    font-size: 2.8rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+  }
+  
+  .about-header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-dark);
+    opacity: 0.9;
+  }
+  
+  /* 使命区渐变背景 */
+  .our-mission {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: var(--text-light);
+    padding: 5rem 6%;
+    border-radius: 12px;
+    margin-bottom: 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .mission-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="white"><circle cx="25" cy="25" r="3"/><circle cx="75" cy="25" r="3"/><circle cx="25" cy="75" r="3"/><circle cx="75" cy="75" r="3"/></svg>');
+    background-size: 50px 50px;
+  }
+  
+  /* 响应式 */
+  @media (max-width: 992px) {
+    .about-header h1 {
+      font-size: 2.4rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-content {
+      padding: 80px 5% 3rem;
+    }
+  
+    .about-header h1 {
+      font-size: 2rem;
+    }
+  
+    .about-header p {
+      font-size: 1rem;
+    }
+  
+    .mission-content h2 {
+      font-size: 1.8rem;
+    }
+  }
+  

@@ -8,8 +8,24 @@
       href="https://fonts.googleapis.com/css2?family=Segoe+UI,Arial,sans-serif&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/calendar.css" />
+    <!-- Base -->
+    <link rel="stylesheet" href="script/css/base/variables.css">
+    <link rel="stylesheet" href="script/css/base/reset.css">
+    <link rel="stylesheet" href="script/css/base/typography.css">
+
+    <!-- Layouts -->
+    <link rel="stylesheet" href="script/css/layouts/header.css">
+    <link rel="stylesheet" href="script/css/layouts/footer.css">
+    <link rel="stylesheet" href="script/css/layouts/sections.css">
+
+    <!-- Components -->
+    <link rel="stylesheet" href="script/css/components/nav.css">
+    <link rel="stylesheet" href="script/css/components/buttons.css">
+    <link rel="stylesheet" href="script/css/components/modal.css">
+
+    <!-- Page-specific -->
+    <link rel="stylesheet" href="script/css/pages/calendar.css">
+
   </head>
   <body>
     <!-- 导航栏 -->
@@ -28,7 +44,7 @@
         <h2 id="monthYear" style="color: black"></h2>
         <button class="controls-btn" id="nextMonthBtn">›</button>
         <button class="add-btn" id="addEventBtn">
-          <img src="../../res/icon/icons8-添加-48.png" alt="Add Event" />
+          <img src="res/icon/icons8-添加-48.png" alt="Add Event" />
         </button>
       </div>
       <table class="calendar-table" id="calendar">
@@ -132,7 +148,7 @@
       </div>
     </div>
 
-    <script src="../js/calendar.js"></script>
-    <script src="../js/template-loader.js"></script>
+    <script src="script/js/calendar.js"></script>
+    <script src="script/js/template-loader.js"></script>
   </body>
 </html>
