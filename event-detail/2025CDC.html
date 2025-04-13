@@ -1,458 +1,537 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>2025 CDC电路设计大赛 | 莱斯特大学IEEE学生分会</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
     />
     <!-- Base -->
-    <link rel="stylesheet" href="../script/css/base/variables.css" />
-    <link rel="stylesheet" href="../script/css/base/reset.css" />
-    <link rel="stylesheet" href="../script/css/base/typography.css" />
+    <link rel="stylesheet" href="../script/css/base/variables.css"/>
+    <link rel="stylesheet" href="../script/css/base/reset.css"/>
+    <link rel="stylesheet" href="../script/css/base/typography.css"/>
 
     <!-- Layouts -->
-    <link rel="stylesheet" href="../script/css/layouts/header.css" />
-    <link rel="stylesheet" href="../script/css/layouts/footer.css" />
-    <link rel="stylesheet" href="../script/css/layouts/sections.css" />
+    <link rel="stylesheet" href="../script/css/layouts/header.css"/>
+    <link rel="stylesheet" href="../script/css/layouts/footer.css"/>
+    <link rel="stylesheet" href="../script/css/layouts/sections.css"/>
 
     <!-- Components -->
-    <link rel="stylesheet" href="../script/css/components/nav.css" />
-    <link rel="stylesheet" href="../script/css/components/buttons.css" />
-    <link rel="stylesheet" href="../script/css/components/downloads.css" />
-    <link rel="stylesheet" href="../script/css/components/cards.css" />
-    <link rel="stylesheet" href="../script/css/components/timeline.css" />
-    <link rel="stylesheet" href="../script/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../script/css/components/nav.css"/>
+    <link rel="stylesheet" href="../script/css/components/buttons.css"/>
+    <link rel="stylesheet" href="../script/css/components/downloads.css"/>
+    <link rel="stylesheet" href="../script/css/components/cards.css"/>
+    <link rel="stylesheet" href="../script/css/components/timeline.css"/>
+    <link rel="stylesheet" href="../script/css/components/sidebar.css"/>
 
     <!-- Page-specific -->
-    <link rel="stylesheet" href="../script/css/pages/event-detail.css" />
+    <link rel="stylesheet" href="../script/css/pages/event-detail.css"/>
 
     <style>
 
     </style>
-  </head>
-  <body>
-    <!-- 导航栏 -->
-    <nav class="global-nav">
-      <img
-        src="../res/image/IEEE学生会logo.jpg"
-        alt="IEEE Logo"
-        class="nav-logo"
-      />
-      <div class="nav-menu">
+</head>
+<body>
+<!-- 导航栏 -->
+<nav class="global-nav">
+    <img
+            src="../res/image/IEEE学生会logo.jpg"
+            alt="IEEE Logo"
+            class="nav-logo"
+    />
+    <div class="nav-menu">
         <a href="index.html" class="nav-item">Home</a>
         <a href="events.html" class="nav-item">Events</a>
         <a href="calendar.html" class="nav-item">Calendar</a>
         <a href="collaboration.html" class="nav-item">Collaboration</a>
         <!-- <a href="committee.html" class="nav-item">Committee</a> -->
         <a href="about.html" class="nav-item">About Us</a>
-      </div>
-      <a href="#join" class="nav-item join-button">Join IEEE</a>
-    </nav>
+    </div>
+    <a href="#join" class="nav-item join-button">Join IEEE</a>
+</nav>
 
-    <main class="event-detail">
-      <!-- 活动头图区 -->
-      <div
-        class="event-hero"
-        style="background-image: url('../res/image/event-circuit-design.jpg')"
-      >
+<main class="event-detail">
+    <!-- 活动头图区 -->
+    <div
+            class="event-hero"
+            style="background-image: url('../res/image/event-circuit-design.jpg')"
+    >
         <div class="hero-overlay">
-          <span class="event-badge">年度赛事</span>
-          <h1>2025 CDC电路设计大赛</h1>
-          <div class="event-meta">
-            <img
-              src="../res/icon/icons8-日历-48.png"
-              class="meta-icon"
-              alt="日期"
-            />
-            <span>2025年4月1日-7月15日</span>
-          </div>
-          <div class="event-meta">
-            <img
-              src="../res/icon/icons8-通知-48.png"
-              class="meta-icon"
-              alt="主办方"
-            />
-            <span>莱斯特大学IEEE学生分会</span>
-          </div>
+            <span class="event-badge">Annual Event</span>
+            <h1>2025 IEEE University of Leicester Student Branch Circuit Design Contest</h1>
+            <div class="event-meta">
+                <img
+                        src="../res/icon/icons8-日历-48.png"
+                        class="meta-icon"
+                        alt="日期"
+                />
+                <span>April 1, 2025-July 15, 2025</span>
+            </div>
+            <div class="event-meta">
+                <img
+                        src="../res/icon/icons8-通知-48.png"
+                        class="meta-icon"
+                        alt="主办方"
+                />
+                <span>University of Leicester IEEE Student Branch</span>
+            </div>
         </div>
-      </div>
+    </div>
 
-      <!-- 单张居中图片 -->
-      <section class="event-card">
-          <div class="event-image">
+    <!-- 单张居中图片 -->
+    <section class="event-card">
+        <div class="event-image">
             <img
-              src="../res/image/2025CDC_海报.jpg"
-              alt="Participants demonstrating their projects"
-              loading="lazy"
+                    src="../res/image/2025CDC_海报.jpg"
+                    alt="Participants demonstrating their projects"
+                    loading="lazy"
             />
-          </div>
-      </section>
+        </div>
+    </section>
 
-      <div class="event-content">
+    <div class="event-content">
         <!-- 主内容区 -->
         <div class="event-main">
-          <section class="event-description">
-            <h2>赛事简介</h2>
-            <p>
-              2025
-              CDC电路设计大赛是由莱斯特大学IEEE学生分会主办的年度电子设计竞赛，面向全校学生开放。本次竞赛主要围绕电路设计，包括模拟电路、数字电路、混合信号电路、嵌入式系统及系统模块的方案设计。
-            </p>
+            <section class="event-description">
+                <h2>Overview</h2>
+                <p>
+                    Organized by the IEEE University of Leicester Student Branch Circuit Design Contest Executive
+                    Committee (CDCEC), the CDC’25 is an international
+                    competition fostering innovation and collaboration in circuit design. Co-sponsored by leading IEEE
+                    societies and industry partners, this contest
+                    invites undergraduate and postgraduate students worldwide to tackle real-world engineering
+                    challenges using electronics, embedded systems, and
+                    circuit design. Participants gain hands-on experience, expand their professional networks, and
+                    compete for prestigious awards.
+                </p>
 
-            <div class="highlight-box">
-              <h3>竞赛亮点</h3>
-              <ul>
-                <li>使用EasyEDA进行PCB设计</li>
-                <li>获得IEEE官方认证的参赛证书</li>
-                <li>优胜者将获得丰厚奖品和实习机会</li>
-                <li>促进跨学科团队合作</li>
-              </ul>
-            </div>
-          </section>
+                <!--            <div class="highlight-box">-->
+                <!--              <h3>竞赛亮点</h3>-->
+                <!--              <ul>-->
+                <!--                <li>使用EasyEDA进行PCB设计</li>-->
+                <!--                <li>获得IEEE官方认证的参赛证书</li>-->
+                <!--                <li>优胜者将获得丰厚奖品和实习机会</li>-->
+                <!--                <li>促进跨学科团队合作</li>-->
+                <!--              </ul>-->
+                <!--            </div>-->
 
-          <!-- 赛事规则 -->
-          <section class="competition-rules">
-            <h2>赛事规则</h2>
+                <!-- 赛事时间线 -->
+                <section class="event-timeline">
+                    <h2>Key Dates</h2>
+                    <div class="timeline-container">
+                        <div class="timeline-node">
+                            <div class="timeline-date">2025.4.1</div>
+                            <div class="timeline-content">
+                                <h3>Official Launch</h3>
+                            </div>
+                        </div>
+                        <div class="timeline-node">
+                            <div class="timeline-date">2025.5.14</div>
+                            <div class="timeline-content">
+                                <h3>Registration Deadline</h3>
+                            </div>
+                        </div>
+                        <div class="timeline-node">
+                            <div class="timeline-date">2025.5.15</div>
+                            <div class="timeline-content">
+                                <h3>Preliminary Review Submission</h3>
+                            </div>
+                        </div>
+                        <div class="timeline-node">
+                            <div class="timeline-date">2025.7.4</div>
+                            <div class="timeline-content">
+                                <h3>Final Submission Deadline</h3>
+                            </div>
+                        </div>
+                        <div class="timeline-node">
+                            <div class="timeline-date">2025.7.15</div>
+                            <div class="timeline-content">
+                                <h3>Awards Ceremony</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
 
-            <div class="rule-item">
-              <h3>项目范围</h3>
-              <p>竞赛主要围绕电路设计，包括但不限于：</p>
-              <ul>
-                <li>模拟电路设计</li>
-                <li>数字电路设计</li>
-                <li>混合信号电路设计</li>
-                <li>嵌入式系统设计</li>
-                <li>系统模块方案设计</li>
-              </ul>
-              <p>设计可包含微控制器、传感器、无线模块、电力电子元件等。</p>
-            </div>
+            <!-- 赛事规则 -->
+            <section class="competition-rules">
+                <h2>Contest Rules</h2>
 
-            <div class="rule-item">
-              <h3>设计要求</h3>
-              <ul>
-                <li>
-                  参赛队伍必须提交可工作的原型或经过验证的仿真设计，并提供清晰的文档说明
-                </li>
-                <li>所有作品必须为原创，不得使用其他竞赛或商业项目的设计</li>
-                <li>每个项目的预算不得超过￡200</li>
-                <li>
-                  关方指定的PCB设计EDA工具为EasyEDA，支持在线协作及免费下载（网址：<a
-                    href="https://easyeda.com"
-                    >https://easyeda.com</a
-                  >）
-                </li>
-              </ul>
-            </div>
-
-            <div class="rule-item">
-              <h3>开源原则</h3>
-              <ul>
-                <li>
-                  所有项目必须公开设计资料(原理图、PCB布局、代码、文档等)供教育使用
-                </li>
-              </ul>
-            </div>
-
-            <div class="rule-item">
-              <h3>提交材料(针对入围队伍)</h3>
-              <ul>
-                <li>1000字摘要</li>
-                <li>电路图、PCB布局（必须使用EasyEDA）</li>
-                <li>2~3项技术报告（使用指定模板，包含EasyEDA和IEEE标识）</li>
-                <li>3分钟演示视频（需包含EasyEDA和IEEE标识）</li>
-                <li>原型、测量结果或仿真输出，并附详细文档</li>
-                <li>源代码及项目文件，存储于共享仓库</li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- 参赛资格 -->
-          <section class="competition-rules">
-            <h2>参赛资格</h2>
-
-            <div class="rule-item">
-              <h3>学籍要求</h3>
-              <ul>
-                <li>
-                  参赛者必须是2024-2025学年期间在以下学校/机构注册的本科生或研究生
-                </li>
-                <li>莱斯特大学：工程学院</li>
-                <li>
-                  莱斯特国际学院（中国）：大连理工大学莱斯特国际学院的机械工程（080806H）及过程装备与控制工程专业
-                </li>
-              </ul>
-            </div>
-
-            <div class="rule-item">
-              <h3>IEEE会员资格</h3>
-              <ul>
-                <li>每支队伍至少50%成员需为IEEE学生会员</li>
-                <li>
-                  团队负责人（主要作者）必须是其所在大学IEEE学生分会的学生会员
-                </li>
-              </ul>
-            </div>
-
-            <div class="rule-item">
-              <h3>跨机构要求</h3>
-              <ul>
-                <li>
-                  每支队伍至少包含来自不同校区的两名成员（例如，1名来自莱斯特大学，1名来自大连理工大学莱斯特国际学院）
-                </li>
-              </ul>
-            </div>
-
-            <div class="rule-item">
-              <h3>提交材料</h3>
-              <ul>
-                <li>
-                  每支队伍由2至4名学生组成，每位参赛者最多只能加入一个团队
-                </li>
-                <li>每支队伍最多可有一名研究生作为导师或团队成员</li>
-                <li>每支队伍至少包含一名女性学生（本科或研究生）</li>
-                <li>队伍注册提交后，队员不可随意更换</li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- 团队组建方式 -->
-          <section class="competition-rules">
-            <h2>团队组建方式</h2>
-
-            <div class="rule-item">
-              <ul>
-                <li>
-                  参赛者可自行联系符合资格的学生组队，并填写官方提供的报名表，发送至区域负责人邮箱(详见附录)
-                </li>
-                <li>
-                  参赛者可通过IEEE学生分会官网(<a href="http://www.uolieee.org"
-                    >www.uolieee.org</a
-                  >)寻找队友，并在社交块发布帖子，包含个人经历、联系方式及优势等信息
-                </li>
-                <li>
-                  参赛者可填写IEEE
-                  SB发布的统计表，包含个人介绍(基本信息、联系方式、个人优势等)，CDCEC将协助团队组建
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- 赛事时间线 -->
-          <section class="event-timeline">
-            <h2>赛事时间</h2>
-            <div class="timeline-container">
-              <div class="timeline-node">
-                <div class="timeline-date">2025.4.1</div>
-                <div class="timeline-content">
-                  <h3>官方启动</h3>
-                  <p>比赛正式开始报名</p>
+                <div class="rule-item">
+                    <h3>Design Scope</h3>
+                    <ul>
+                        <li>Focus on analog/digital circuits, embedded systems, or mixed-signal solutions (e.g.,
+                            sensors, power electronics)
+                        </li>
+                        <li><strong>EDA Tool</strong>: EasyEDA (mandatory for PCB design; free download: <a
+                                href="https://easyeda.com">EasyEDA</a>)
+                        </li>
+                    </ul>
                 </div>
-              </div>
-              <div class="timeline-node">
-                <div class="timeline-date">2025.5.14</div>
-                <div class="timeline-content">
-                  <h3>报名截止</h3>
-                  <p>所有团队必须完成注册</p>
-                </div>
-              </div>
-              <div class="timeline-node">
-                <div class="timeline-date">2025.7.4</div>
-                <div class="timeline-content">
-                  <h3>提交截止</h3>
-                  <p>所有参赛材料提交截止</p>
-                </div>
-              </div>
-              <div class="timeline-node">
-                <div class="timeline-date">2025.7.15</div>
-                <div class="timeline-content">
-                  <h3>最终评审及颁奖</h3>
-                  <p>公布获奖名单并举行颁奖典礼</p>
-                </div>
-              </div>
-            </div>
-          </section>
 
-          <!-- 奖项设置 -->
-          <section class="awards-section">
-            <h2>奖项设置</h2>
-            <div class="awards-grid">
-              <div class="award-card">
-                <h4>一等奖</h4>
-                <ul>
-                  <li>奖金 ￡150</li>
-                  <li>IEEE证书</li>
-                  <li>神秘智能礼品</li>
-                </ul>
-              </div>
-              <div class="award-card">
-                <h4>二等奖</h4>
-                <ul>
-                  <li>奖金 ￡50</li>
-                  <li>IEEE证书</li>
-                  <li>神秘智能礼品</li>
-                </ul>
-              </div>
-              <div class="award-card">
-                <h4>工业应用奖</h4>
-                <ul>
-                  <li>奖金 ￡50</li>
-                  <li>IEEE证书</li>
-                  <li>神秘智能礼品</li>
-                </ul>
-              </div>
-              <div class="award-card">
-                <h4>最佳创新奖</h4>
-                <ul>
-                  <li>奖金 ￡50</li>
-                  <li>IEEE证书</li>
-                  <li>神秘智能礼品</li>
-                </ul>
-              </div>
-              <div class="award-card">
-                <h4>女性电子工程师奖（WiE）</h4>
-                <ul>
-                  <li>奖金 ￡50</li>
-                  <li>IEEE证书</li>
-                  <li>神秘智能礼品</li>
-                </ul>
-              </div>
-              <div class="award-card">
-                <h4>PowerLeicester Award</h4>
-                <ul>
-                  <li>奖金 ￡50</li>
-                  <li>IEEE证书</li>
-                  <li>神秘智能礼品</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section class="awards-section">
-            <h2>联系我们</h2>
-              <div class="image-grid">
-              <img
-                  src="../res/image/2025CDC_qq群.jpg"
-                  alt="Judge evaluating project"
-                  loading="lazy"
-              />
-              <img
-                  src="../res/image/2025CDC_策划者微信号.png"
-                  alt="Team working on hardware"
-                  loading="lazy"
-              />
-              </div>
-          </section>
-
-          <!-- 文件下载区 -->
-          <section class="download-section">
-            <h2>赛事资源</h2>
-            <div class="download-list">
-              <div class="download-item">
-                <img
-                  src="../res/icon/icons8-文件-24.png"
-                  class="download-icon"
-                  alt="PDF"
-                />
-                <div>
-                  <a
-                    href="../doc/2_University of Leicester 2025 CDC Guidelines_v16(2).pdf"
-                    download="CDC2025_比赛规则.pdf"
-                    >2_University of Leicester 2025 CDC Guidelines_v16(2)</a
-                  >
-                  <p class="file-meta">1109KB</p>
+                <div class="rule-item">
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>
+                            Submit a <strong>working prototype</strong> or <strong>verified simulation</strong> with
+                            documentation
+                        </li>
+                        <li><strong>Budget</strong>: ≤$200 per project</li>
+                        <li><strong>Originality</strong>: Designs must be student-developed, not reused from prior
+                            projects
+                        </li>
+                    </ul>
                 </div>
-              </div>
-              <div class="download-item">
-                <img
-                  src="../res/icon/icons8-文件-24.png"
-                  class="download-icon"
-                  alt="Word"
-                />
-                <div>
-                  <a
-                    href="../doc/2025 IEEE University of Leicester Student Branch Circuit Design Contest (CDC’25).docx"
-                    download="CDC2025_报名表.xlsx"
-                    >2025 IEEE University of Leicester Student Branch Circuit
-                    Design Contest (CDC’25)</a
-                  >
-                  <p class="file-meta">23KB</p>
+
+                <div class="rule-item">
+                    <h3>Open-Source Principle</h3>
+                    <ul>
+                        <li>
+                            All finalists must publish schematics, PCB layouts, code, and documentation as open-source
+                        </li>
+                    </ul>
                 </div>
-              </div>
-            </div>
-          </section>
+
+
+            </section>
+
+            <section class="competition-rules">
+                <h2>Submission Materials</h2>
+
+                <div class="rule-item">
+                    <h3>Preliminary Review (May 15, 2025)</h3>
+                    <ul>
+                        <li>Proposal including project plan, functional description, innovation highlights, component
+                            list, cost breakdown, progress report, and references
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="rule-item">
+                    <h3>Final Submission (July 4, 2025)</h3>
+                    <ul>
+                        <li>100-word abstract, block diagrams, schematics, technical report (2–4 pages), 3-minute demo
+                            video (with IEEE/EasyEDA logos), prototype/simulation results, and source code
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 参赛资格 -->
+            <section class="competition-rules">
+                <h2>Eligibility Criteria</h2>
+
+                <div class="rule-item">
+                    <h3>Affiliation</h3>
+                    <ul>
+                        <li>
+                            Open to undergraduates (UG) and postgraduates (PG) enrolled in 2024–2025 at:
+                        </li>
+                        <li>University of Leicester (School of Engineering, UK)</li>
+                        <li>
+                            Dalian Leicester Institute (China)
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="rule-item">
+                    <h3>IEEE Membership</h3>
+                    <ul>
+                        <li>＞51% of team members must be IEEE Student Members</li>
+                        <li>
+                            Team leader must be an IEEE Student Member affiliated with their university’s IEEE branch
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="rule-item">
+                    <h3>Team Composition</h3>
+                    <ul>
+                        <li>
+                            <strong>Size</strong>: 2–4 students (each participant can join only one team)
+                        </li>
+                        <li>
+                            <strong>Cross-Campus Requirement</strong>: At least 2 members from different campuses (e.g.,
+                            UK and China)
+                        </li>
+                        <li>
+                            <strong>Gender Diversity</strong>: ≥1 female member (UG or PG)
+                        </li>
+                        <li>
+                            <strong>Senior Member Limit</strong>: ≤1 postgraduate as mentor/team member
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 团队组建方式 -->
+            <section class="competition-rules">
+                <h2>Registration & Team Formation</h2>
+
+                <div class="rule-item">
+                    <h3>How to Register</h3>
+                    <ul>
+                        <li>
+                            Submit a team registration form (template provided) via email to <strong>cy118@student.le.ac.uk</strong>
+                            by May 14, 2025
+                        </li>
+                        <li>
+                            Use the subject line: “Hardware Contest Information of Participating Team”
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="rule-item">
+                    <h3>Team Formation</h3>
+                    <ul>
+                        <li>
+                            Self-organize or use the IEEE Student Branch website (<a href="http://www.uolieee.org">http://www.uolieee.org</a>)
+                            to connect with peers
+                        </li>
+                        <li>
+                            Fill out the participant form for assistance from CDCEC in team matching
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Judging Criteria -->
+            <section class="competition-rules">
+                <h2>Judging Criteria</h2>
+
+                <ul>
+                    <li><strong>Innovation</strong>: 35 points</li>
+                    <li><strong>Functionality</strong>: 45 points</li>
+                    <li><strong>Cost Efficiency</strong>: 15 points</li>
+                    <li><strong>Progress</strong>: 15 points</li>
+                </ul>
+
+            </section>
+
+            <!-- 赛事阶段 -->
+            <section class="event-timeline">
+                <h2>Contest Phases</h2>
+                <div class="timeline-container">
+                    <div class="timeline-node">
+                        <div class="timeline-date">April 7 – May 14, 2025</div>
+                        <div class="timeline-content">
+                            <h3>Phase 1: Registration</h3>
+                            <p>Promotional events, team formation, and submission of registration forms</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-node">
+                        <div class="timeline-date">May 15 – July 4, 2025</div>
+                        <div class="timeline-content">
+                            <h3>Phase 2: Preliminary Review</h3>
+                            <p>Submit proposals for technical feasibility and innovation evaluation</p>
+                            <p><strong>Reimbursement</strong>: ￡200 for finalists to cover project expenses
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-node">
+                        <div class="timeline-date">July 15, 2025</div>
+                        <div class="timeline-content">
+                            <h3>Reimbursement</h3>
+                            <p>Global finals at the University of Leicester</p>
+                            <p>Live prototype demonstrations and prize announcements</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- 奖项设置 -->
+            <section class="awards-section">
+                <h2>Prizes</h2>
+                <div class="awards-grid">
+                    <div class="award-card" style="border-top: gold 4px solid">
+                        <h4>First Prize</h4>
+                        <ul>
+                            <li>￡150</li>
+                            <li>IEEE Certificate</li>
+                            <li>Intelligent Gift</li>
+                        </ul>
+                    </div>
+                    <div class="award-card"style="border-top: silver 4px solid">
+                        <h4>Second Prize</h4>
+                        <ul>
+                            <li>￡50</li>
+                            <li>IEEE Certificate</li>
+                            <li>Intelligent Gift</li>
+                        </ul>
+                    </div>
+                    <div class="award-card">
+                        <h4>Industry Award</h4>
+                        <ul>
+                            <li>￡50</li>
+                            <li>IEEE Certificate</li>
+                            <li>Intelligent Gift</li>
+                        </ul>
+                    </div>
+                    <div class="award-card">
+                        <h4>Best Innovation Award</h4>
+                        <ul>
+                            <li>￡50</li>
+                            <li>IEEE Certificate</li>
+                            <li>Intelligent Gift</li>
+                        </ul>
+                    </div>
+                    <div class="award-card">
+                        <h4>Woman-in-Electronics (WiE) Award</h4>
+                        <ul>
+                            <li>￡50</li>
+                            <li>IEEE Certificate</li>
+                            <li>Intelligent Gift</li>
+                            <li>Open to female IEEE Student Members demonstrating technical leadership</li>
+                        </ul>
+                    </div>
+                    <div class="award-card">
+                        <h4>PowerLeicester Award</h4>
+                        <ul>
+                            <li>￡50</li>
+                            <li>IEEE Certificate</li>
+                            <li>Intelligent Gift</li>
+                            <li>Requires ≥75% of team members to be IEEE PELS members</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="awards-section">
+                <h2>Contact Us</h2>
+                <div class="image-grid">
+                    <img
+                            src="../res/image/2025CDC_qq群.jpg"
+                            alt="Judge evaluating project"
+                            loading="lazy"
+                    />
+                    <img
+                            src="../res/image/2025CDC_策划者微信号.png"
+                            alt="Team working on hardware"
+                            loading="lazy"
+                    />
+                </div>
+            </section>
+
+            <!-- 文件下载区 -->
+            <section class="download-section">
+                <h2>Event Resources</h2>
+                <div class="download-list">
+                    <div class="download-item">
+                        <img
+                                src="../res/icon/icons8-文件-24.png"
+                                class="download-icon"
+                                alt="PDF"
+                        />
+                        <div>
+                            <a
+                                    href="../doc/2_University of Leicester 2025 CDC Guidelines_v16(2).pdf"
+                                    download="University of Leicester 2025 CDC Guidelines_v16.pdf"
+                            >2_University of Leicester 2025 CDC Guidelines_v16(2)</a
+                            >
+                            <p class="file-meta">1109KB</p>
+                        </div>
+                    </div>
+                    <div class="download-item">
+                        <img
+                                src="../res/icon/icons8-文件-24.png"
+                                class="download-icon"
+                                alt="Word"
+                        />
+                        <div>
+                            <a
+                                    href="../doc/2025 IEEE University of Leicester Student Branch Circuit Design Contest (CDC’25).docx"
+                                    download="2025 IEEE University of Leicester Student Branch Circuit Design Contest (CDC’25).docx"
+                            >2025 IEEE University of Leicester Student Branch Circuit
+                                Design Contest (CDC’25)</a
+                            >
+                            <p class="file-meta">23KB</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
 
         <!-- 侧边栏 -->
         <aside class="event-sidebar">
-          <div class="registration-box">
-            <h3>立即报名</h3>
-            <p>报名截止: 2025年5月14日</p>
-            <a href="#registration-form" class="button primary">在线报名</a>
-            <!-- <p class="small-text">或联系: events@uol-ieee.org</p> -->
-          </div>
+<!--            <div class="registration-box">-->
+<!--                <h3>立即报名</h3>-->
+<!--                <p>报名截止: 2025年5月14日</p>-->
+<!--                <a href="#registration-form" class="button primary">在线报名</a>-->
+<!--                &lt;!&ndash; <p class="small-text">或联系: events@uol-ieee.org</p> &ndash;&gt;-->
+<!--            </div>-->
 
-          <div class="organizer-info">
-            <h3>主办单位</h3>
-            <img
-              src="../../res/image/IEEE学生会logo.jpg"
-              alt="IEEE Student Chapter"
-              style="max-width: 100%; margin-bottom: 1rem"
-            />
-            <p>莱斯特大学IEEE学生分会</p>
-            <p>电子与电气工程学院</p>
-          </div>
+            <div class="organizer-info">
+                <h3>Organizers</h3>
+                <img
+                        src="../../res/image/IEEE学生会logo.jpg"
+                        alt="IEEE Student Chapter"
+                        style="max-width: 100%; margin-bottom: 1rem"
+                />
+                <p>University of Leicester IEEE Student Branch</p>
+            </div>
 
-          <div class="quick-links">
-            <h3>快速链接</h3>
-            <ul>
-              <li>
-                <a href="https://www.easyeda.com/" target="_blank"
-                  >EasyEDA官网</a
-                >
-              </li>
-            </ul>
-          </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.easyeda.com/" target="_blank"
+                        >EasyEDA</a
+                        >
+                    </li>
+                </ul>
+            </div>
 
-          <div class="contact-info">
-            <h3>联系方式</h3>
-            <p>赛事负责人: 姚晨</p>
-            <p>邮箱: cy118@student.le.ac.uk</p>
-          </div>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <h4>General Queries</h4>
+                <ul>
+                    <li>Mr. Chen Yao (CDCEC Chair): cy118@student.le.ac.uk</li>
+                </ul>
+                <h4>Regional Coordinators</h4>
+                <ul>
+                    <li><strong>UK Campus</strong>: Mr. Qianrui Liu (ql156@leicester.ac.uk)</li>
+                    <li><strong>China Campus</strong>: Mr. Xiang Liu (xl408@student.le.ac.uk)</li>
+                </ul>
+            </div>
         </aside>
-      </div>
-    </main>
+    </div>
+</main>
 
-    <!-- 页脚 -->
+<!-- 页脚 -->
 
-    <footer class="global-footer">
-      <div class="footer-container">
+<footer class="global-footer">
+    <div class="footer-container">
         <div class="footer-branding">
-          <img
-            src="res/image/GIMO logo.png"
-            alt="GIMO Logo"
-            class="footer-logo"
-          />
-          <div>
-            <p>University of Leicester</p>
-            <p>IEEE Student Branch</p>
-          </div>
+            <img
+                    src="res/image/GIMO logo.png"
+                    alt="GIMO Logo"
+                    class="footer-logo"
+            />
+            <div>
+                <p>University of Leicester</p>
+                <p>IEEE Student Branch</p>
+            </div>
         </div>
         <div class="footer-meta">
-          <p>
-            <a href="mailto:GIMO118@outlook.com" class="footer-link"
-              >GIMO118@outlook.com</a
-            >
-          </p>
-          <p>
-            <a href="https://ieee.le.ac.uk" class="footer-link"
-              >https://ieee.le.ac.uk</a
-            >
-          </p>
-          <p>&copy; 2024 GIMO Group</p>
+            <p>
+                <a href="mailto:GIMO118@outlook.com" class="footer-link"
+                >GIMO118@outlook.com</a
+                >
+            </p>
+            <p>
+                <a href="https://ieee.le.ac.uk" class="footer-link"
+                >https://ieee.le.ac.uk</a
+                >
+            </p>
+            <p>&copy; 2024 GIMO Group</p>
         </div>
-      </div>
-    </footer>
-  </body>
+    </div>
+</footer>
+</body>
 </html>
