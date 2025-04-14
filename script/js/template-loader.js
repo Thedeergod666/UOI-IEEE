@@ -106,7 +106,7 @@ class TemplateLoader {
   createFallbackNav() {
     return `
     <nav class="global-nav">
-        <img src="res/image/IEEE学生会logo.jpg" alt="IEEE Logo" class="nav-logo">
+        <img src="res/image/IEEE学生会logo.png" alt="IEEE Logo" class="nav-logo">
         <div class="nav-menu">
             <a href="index.html" class="nav-item">Home</a>
             <a href="events.html" class="nav-item">Events</a>
