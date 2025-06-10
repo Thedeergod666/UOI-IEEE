@@ -6,34 +6,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
 class EventManager {
     constructor() {
-        this.endpoints = {
-            upcoming: '/api/events/upcoming',
-            past: '/api/events/past'
-        };
+        this.upcomingEventsData = [
+            {
+                date: 'May 30, 2025',
+                title: 'University of Leicester IEEE IAS/PELS Joint Student Branch Chapter Shines at Manchester Transport Electrification Workshop',
+                description: 'The University of Leicester IEEE IAS/PELS Joint Student Branch Chapter showcased cutting-edge research and innovative activities at the Manchester Transport Electrification Workshop, highlighting its unique influence as an international academic community.',
+                image: 'res/image/manchester_workshop.jpg',
+                link: 'event-detail/manchester-workshop.html'
+            }
+        ];
+
+        this.pastEventsData = [
+            {
+                date: 'May 2025',
+                title: 'International Exchange',
+                description: 'Online exchange event with Dalian University of Technology student branch.',
+                photos: ''
+            },
+            {
+                date: 'April 2025',
+                title: 'Hardware Competition',
+                description: 'Annual hardware design competition with over 30 participating teams.',
+                photos: ''
+            },
+            {
+                date: 'March 2025',
+                title: 'Technical Seminar',
+                description: 'Cutting-edge technology sharing session on AI applications in engineering.',
+                photos: ''
+            },
+            {
+                date: 'December 2024',
+                title: 'IEEE Establishment',
+                description: 'Official inauguration ceremony attended by professors and industry experts.',
+                photos: ''
+            }
+        ];
     }
     
     async init() {
-        await this.loadUpcomingEvents();
-        await this.loadPastEvents();
+        this.loadUpcomingEvents();
+        this.loadPastEvents();
         this.setupNavScroll();
         this.setActiveNavItem();
     }
     
-    async fetchEvents(url) {
-        try {
-            const response = await fetch(url);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            return await response.json();
-        } catch (error) {
-            console.error(`Failed to load events: ${url}`, error);
-            return [];
-        }
-    }
-    
-    async loadUpcomingEvents() {
-        const events = await this.fetchEvents(this.endpoints.upcoming);
-        if (events.length > 0) {
-            this.renderUpcomingEvents(events);
+    loadUpcomingEvents() {
+        if (this.upcomingEventsData.length > 0) {
+            this.renderUpcomingEvents(this.upcomingEventsData);
         } else {
             this.showNoEventsMessage('upcoming');
         }
@@ -46,13 +66,14 @@ class EventManager {
             const card = document.createElement('article');
             card.className = 'event-card';
             card.innerHTML = `
-                <img src="${event.image}" alt="${event.title}" class="event-image">
-                <div class="event-content">
-                    <div class="event-date">${event.date}</div>
-                    <h3 class="event-title">${event.title}</h3>
-                    <p class="event-description">${event.description}</p>
-                    <a href="${event.link}" class="event-button">Learn More</a>
-                </div>
+                <a href="${event.link}" class="event-card-link">
+                    <div class="event-content">
+                        <div class="event-date">${event.date}</div>
+                        <h3 class="event-title">${event.title}</h3>
+                        <p class="event-description">${event.description}</p>
+                    </div>
+                    <img src="${event.image}" alt="${event.title}" class="event-image">
+                </a>
             `;
             grid.appendChild(card);
         });
@@ -78,6 +99,7 @@ class EventManager {
                 <h3 class="timeline-title">${event.title}</h3>
                 <p>${event.description}</p>
                 ${event.photos ? `<div class="event-photos">Photos: ${event.photos}</div>` : ''}
+                ${event.link ? `<a href="${event.link}" class="event-button">Learn More</a>` : ''}
             `;
             timeline.appendChild(item);
         });

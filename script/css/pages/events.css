@@ -32,15 +32,65 @@
     background: linear-gradient(to bottom, var(--primary-blue), var(--secondary-blue));
   }
   
-  /* 响应式 */
+  .page-title {
+    font-size: 2.5rem; /* Default font size for larger screens */
+    margin: 6rem 0 2rem; /* Increased top margin */
+    text-align: center;
+  }
+
+  .events-grid {
+      display: flex;
+      flex-direction: column; /* Ensure cards stack vertically */
+      gap: 2rem; /* Spacing between cards */
+  }
+
+  .event-card {
+      display: flex; /* Make content and image flex items */
+      flex-direction: row; /* Arrange content and image horizontally */
+      align-items: center;
+      border: 1px solid var(--light-gray);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+      width: 100%; /* Ensure card takes full width */
+  }
+
+  .event-card:hover {
+      transform: translateY(-5px);
+  }
+
+  .event-card-link {
+      display: flex;
+      width: 100%;
+      text-decoration: none;
+      color: inherit;
+  }
+
+  .event-card .event-content {
+      padding: 1.5rem;
+      flex: 1; /* Allow content to take available space */
+  }
+
+  .event-card .event-image {
+      width: 300px; /* Fixed width for the image */
+      height: 200px; /* Fixed height for the image */
+      object-fit: cover;
+      flex-shrink: 0; /* Prevent image from shrinking */
+  }
+
+  /* Responsive adjustments for smaller screens */
   @media (max-width: 768px) {
     .page-title {
-      font-size: 2rem;
-      margin: 4rem 0 2rem;
+      font-size: 2rem; /* Adjust font size for smaller screens */
     }
-  
-    .events-grid {
-      grid-template-columns: 1fr;
-    }
+      .event-card {
+          flex-direction: column; /* Stack content and image vertically on small screens */
+      }
+
+      .event-card .event-image {
+          width: 100%;
+          height: 200px;
+      }
   }
   
