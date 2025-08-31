@@ -7,16 +7,22 @@ document.addEventListener('DOMContentLoaded', () => {
 class EventManager {
     constructor() {
         this.upcomingEventsData = [
+        ];
+
+        this.pastEventsData = [
+            {
+                date: 'April 1 - July 15, 2025',
+                title: '2025 IEEE University of Leicester Student Branch Circuit Design Contest',
+                description: 'Organized by the IEEE University of Leicester Student Branch Circuit Design Contest Executive Committee (CDCEC), the CDC’25 is an international competition fostering innovation and collaboration in circuit design. Co-sponsored by leading IEEE societies and industry partners, this contest invites undergraduate and postgraduate students worldwide to tackle real-world engineering challenges using electronics, embedded systems, and circuit design. Participants gain hands-on experience, expand their professional networks, and compete for prestigious awards.',
+                link: 'event-detail/2025CDC.html'
+            },
             {
                 date: 'May 30, 2025',
                 title: 'University of Leicester IEEE IAS/PELS Joint Student Branch Chapter Shines at Manchester Transport Electrification Workshop',
                 description: 'The University of Leicester IEEE IAS/PELS Joint Student Branch Chapter showcased cutting-edge research and innovative activities at the Manchester Transport Electrification Workshop, highlighting its unique influence as an international academic community.',
                 image: 'res/image/manchester_workshop.jpg',
                 link: 'event-detail/manchester-workshop.html'
-            }
-        ];
-
-        this.pastEventsData = [
+            },
             {
                 date: 'May 2025',
                 title: 'International Exchange',
@@ -79,10 +85,9 @@ class EventManager {
         });
     }
     
-    async loadPastEvents() {
-        const events = await this.fetchEvents(this.endpoints.past);
-        if (events.length > 0) {
-            this.renderPastEvents(events);
+    loadPastEvents() {
+        if (this.pastEventsData.length > 0) {
+            this.renderPastEvents(this.pastEventsData);
         } else {
             this.showNoEventsMessage('past');
         }
